@@ -1,0 +1,66 @@
+
+Eran Levi
+
+=================
+= Description: =
+=================
+
+#### ex_11_backtrack:
+
+1. The function "general_backtracking" is a naive function for solving
+backtracking problems.
+
+#### ex11_sudoku:
+
+1. The function "load_game" loads a text file of sudoku game into a dictionary.
+
+2. The function "check_board" checking if input is valid
+
+3. The function "run_game" is running the sudoku game.
+
+####  ex11_map_coloring:
+
+1. The function "read_adj_file" loads a text file of sudoku game
+into a dictionary.
+
+2. The function "run_map_coloring" this function solving the graph coloring
+problem for given adjacency file.
+
+3. the function "legal_assignment_func" this function will check if assignment
+of color to name is legal.
+
+####  ex11_improve_backtrack:
+
+1. the function "back_track_degree_heuristic" in order to assign color to the
+regions by their neighbors number, this function organizes the list of items
+by the number of their neighbors from the maximum to the minimum.
+
+In order to make the code more elegant, i had created the func
+"run_map_coloring". this run map is almost similar to "run_map_coloring" from
+ex11_map_coloring, but with a parameter called "backtrack_type".
+
+2. the function "back_track_MRV" assigning colors to the regions by
+the val that have the fewest number of legal assignments.
+this function organizes the list of items by the number of their legal
+assignments left, from the minimum to the maximum.
+
+"specific_backtracking_MRV" is the parallel to general_backtracking.
+this function is solving backtracking problems using MRV formula
+
+3. the function "back_track_FC" is solving backtracking problems using FC
+formula.
+
+"legal_assignment_FC" is the parallel to "legal_assignment_func", but this one
+also looks forward to make sure that a certain assignment isn't creating
+a situation in which other name left with no legal assignment
+
+4. the function "back_track_LCV" is solving backtracking problems using LCV
+formula.
+
+"specific_backtracking_LCV" is the parallel to general_backtracking.
+this function is solving backtracking problems using LCV formula, which means
+calling "LCV_check" function for making the LCV list.
+
+5. the function "fast_back_track" is solving backtracking problems fastest way.
+using MRV, FC and LCV.
+
